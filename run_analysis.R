@@ -172,12 +172,18 @@ mergedata <- function() {
 
      #write the table to a file for submission
      write.csv(results, file="./data/temp/tidydata.csv")
+     return(results)
+
+}
+
+summarizedata <- function(results){
 
 
 }
 
 project <- function(){
      getdata()
-     mergedata()
+     results <- mergedata()
+     summarizedata(results)
 
 }
